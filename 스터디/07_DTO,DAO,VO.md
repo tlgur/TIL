@@ -31,7 +31,7 @@ DTO는 메시지 **포장 용기**
     - Querydsl, Data JPA 등에서 제공하는 DTO 생성 기능을 사용하기 좋다.  
    단점
     - dto 중복 관리가 힘들어진다.
-    - DTO 패키지 자체가 의존성을 가지는 경우 하위 Layer들이 연쇄적으로 의존성이 발생할 위험이 큼
+    - DTO 패키지 자체가 의존성을 가지는 경우 하위 Layer들이 연쇄적으로 의존성이 발생할 위험이 큼  
       ```ex) querydsl 등의 경우 Controller에서 의존성을 가지게 되는 등의 위험이 있다.```
 - Controller의 역할 자체를 dto <-> domain으로 정의하고 Controller에서만 dto를 핸들링하는 접근도 있는듯
 
