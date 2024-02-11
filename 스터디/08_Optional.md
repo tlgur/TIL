@@ -44,3 +44,17 @@ Optional을 굳이 써야할까 싶다.
 - 라이프 사이클이 뻔히 제한돼 있는데 굳이 말았다가 꺼내 쓰는 행위
 - Spring의 RequestBody  
 등의 경우에는 주의가 필요하다.
+
+### Property, Parameter에 사용?
+https://stackoverflow.com/questions/29033518/is-it-a-good-practice-to-use-optional-as-an-attribute-in-a-class
+
+Optional은 반환값에 쓰기를 의도하고 만들었다  
+
+직렬화 & 역직렬화 문제도 있으나  
+
+parameter에 Optional을 passing하는 것 자체가 안티 패턴  
+ - 넘겨받는 메서드의 분기를 강제로 나눠버려서 그런듯  
+ - 메서드 오버로딩 사용해서 분기를 확실히 하는게 더 나은 사용법이라는데,,  
+ - https://medium.com/javarevisited/4-reasons-why-you-should-use-java-optional-or-not-4e44d51a9645
+
+Property에 Optional을 쓰고 싶을때는 Getter의 Return에 쓰는 것이 더 건전해보임  
